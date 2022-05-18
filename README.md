@@ -1,16 +1,13 @@
-# Basic Sample Hardhat Project
+# BanglaRarify
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+This is my dream project of creating a decentralized ecommerce or nft marketplace.
 
-Try running some of the following tasks:
+Following stack has been used for this project:
 
 ```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
+Web application framework - Next.js
+Solidity development environment - Hardhat
+File Storage - IPFS
+Ethereum Web Client Library - Ethers.js
 ```
-# bangla-rarify
+
