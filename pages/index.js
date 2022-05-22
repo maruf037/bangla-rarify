@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Web3mModal from 'web3modal'
 
-//import { marketplaceAddress } from '../config'
+import { marketplaceAddress } from '../config'
 
 import BanglaRarify from '../artifacts/contracts/BanglaRarify.sol/BanglaRarify.dbg.json'
 
@@ -16,7 +16,7 @@ export default function Home() {
   async function loadNFTs() {
     // creating a generic provider and query for usold market items
     const provider = new ethers.providers.JsonRpcProvider();
-    const contract = new ethers.Contract(marketplaceAddress, BanglaRarify.abi, signer);
+    const contract = new ethers.Contract(marketplaceAddress, BanglaRarify.abi, provider);
     const data = await contract.fetchMarketItems();
 
     /* map over items returned from smart contract and format
