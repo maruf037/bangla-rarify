@@ -5,7 +5,7 @@ import Web3Modal from 'web3modal'
 
 import { marketplaceAddress } from '../config'
 
-import BanglaRarify from '../artifacts/contracts/BanglaRarify.sol/BanglaRarify.dbg.json'
+import BanglaRarify from '../artifacts/contracts/BanglaRarify.sol/BanglaRarify.json'
 
 export default function Home() {
   const [nfts, setNfts] = useState([]);

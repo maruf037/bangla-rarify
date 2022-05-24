@@ -8,7 +8,7 @@ const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
 
 import { marketplaceAddress } from '../config'
 
-import BanglaRarify from '../artifacts/contracts/BanglaRarify.sol/BanglaRarify.dbg.json'
+import BanglaRarify from '../artifacts/contracts/BanglaRarify.sol/BanglaRarify.json'
 
 export default function CreateItem() {
     const [fileUrl, setFileUrl] = useState(null)
