@@ -36,7 +36,7 @@ export default function ResellNFT() {
         let listingPrice = await contract.getListingPrice()
 
         listingPrice = listingPrice.toString()
-        let transaction = await contract.resellToken(id, priceFormatted, { value: listingPrice})
+        let transaction = await contract.resellToken(id, priceFormatted, { value: listingPrice })
         await transaction.wait()
 
         router.push('/')
