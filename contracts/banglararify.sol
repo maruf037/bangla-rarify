@@ -48,7 +48,7 @@ contract BanglaRarify is ERC721URIStorage {
         return listingPrice;
     }
 
-    // Minting a token and lists it in the marketplace
+    // Minting a token and listing it in the marketplace
     function createToken(string memory tokenURI, uint256 price) public payable returns (uint) {
         _tokenIds.increment();
         uint256 newTokenId = _tokenIds.current();
@@ -59,10 +59,8 @@ contract BanglaRarify is ERC721URIStorage {
         return newTokenId;
     }
 
-    function createMarketItem(
-        uint256 tokenId,
-        uint256 price
-    ) private {
+    // Creating a market item using the struct
+    function createMarketItem(uint256 tokenId, uint256 price) private {
         require(price > 0, "Price must be at least 1 wei");
         require(msg.value == listingPrice, "Price must be equal to listing price");
 
