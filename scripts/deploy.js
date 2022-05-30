@@ -5,7 +5,7 @@ async function main() {
     const BanglaRarify = await hre.ethers.getContractFactory("BanglaRarify");
     const banglaRarify = await BanglaRarify.deploy();
     await banglaRarify.deployed();
-    console.log("BanglaRarify deployed to: ", banglaRarify.address);
+    console.log("BanglaRarify deployed to: ", banglaRarify.address, "with pleasure!");
 
     fs.writeFileSync('./config.js', `export const marketplaceAddress = "${banglaRarify.address}"`)
 }
