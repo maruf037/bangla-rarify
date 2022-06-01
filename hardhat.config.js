@@ -14,12 +14,11 @@ module.exports = {
     hardhat: {
       chainId: 1337
     },
+    mumbai: {
+      url: "https://rpc-mumbai.matic.today",
+      accounts: [process.env.privateKey]
+    },
   },
-  //  unused configuration commented out for now
-//  mumbai: {
-//    url: "https://rpc-mumbai.maticvigil.com",
-//    accounts: [process.env.privateKey]
-//  }
   solidity: {
     version: "0.8.4",
     settings: {
