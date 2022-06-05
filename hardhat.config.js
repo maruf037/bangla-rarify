@@ -1,3 +1,5 @@
+require('dotenv').config();
+require('@nomiclabs/hardhat-ethers');
 require("@nomiclabs/hardhat-waffle");
 
 // This is a sample Hardhat task. To learn how to create your own go to
@@ -8,15 +10,18 @@ require("@nomiclabs/hardhat-waffle");
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
+
+ const {API_URL, PRIVATE_KEY} = process.env;
+ 
 module.exports = {
-  defaultNetwork: "hardhat",
+  defaultNetwork: "mumbai",
   networks: {
     hardhat: {
       chainId: 1337
     },
     mumbai: {
-      url: "https://rpc-mumbai.matic.today",
-      accounts: [process.env.privateKey]
+      url: API_URL,
+      accounts: [`0x${PRIVATE_KEY}`]
     },
   },
   solidity: {
